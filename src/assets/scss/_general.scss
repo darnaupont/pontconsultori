@@ -58,3 +58,6 @@
   &:hover{ color: $dark-gray;
           background-color: transparent;}
 }
+ .orbit-previous:active, .orbit-next:active, .orbit-previous:focus, .orbit-next:focus {
+  color: $medium-gray;
+}
