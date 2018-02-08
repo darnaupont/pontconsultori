@@ -1,0 +1,60 @@
+//body
+  .prova{
+  @include xy-grid-container;
+  @include xy-grid();
+  }
+// header
+  header{
+      @include xy-cell(3);
+      margin-top: rem-calc(100);
+      text-transform: uppercase;
+      .menuPrincipal{
+        li{
+          color: $dark-gray;
+          list-style-type: none;
+
+          // margin-top:1rem;
+        }
+        ul{
+          margin:0;
+          margin-bottom:1rem;
+        }
+        a{
+          padding-top:1rem;
+          color: $dark-gray;
+          &:hover{
+            color:$medium-gray;
+          .active{
+            color:$black;
+           }
+          }
+        }
+
+      }
+      .logo img{
+        width:8rem;
+      }
+
+
+  }
+
+//body
+  .container{
+      @include xy-cell(9);
+
+  }
+
+// .patata{
+//   @include xy-cell(5);
+// }
+// .patata2{
+//   @include xy-cell(5);
+// }
+
+//orbit
+.orbit-previous, .orbit-next {
+  color: $medium-gray;
+  margin: 0 -1.5rem;
+  &:hover{ color: $dark-gray;
+          background-color: transparent;}
+}
