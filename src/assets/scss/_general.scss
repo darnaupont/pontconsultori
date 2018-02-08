@@ -6,12 +6,13 @@
 // header
   header{
       @include xy-cell(3);
-      margin-top: rem-calc(100);
+      margin-top: rem-calc(50);
       text-transform: uppercase;
       .menuPrincipal{
         li{
           color: $dark-gray;
           list-style-type: none;
+              line-height: 1.2;
 
           // margin-top:1rem;
         }
@@ -20,6 +21,7 @@
           margin-bottom:1rem;
         }
         a{
+          font-weight: bolder;
           padding-top:1rem;
           color: $dark-gray;
           &:hover{
@@ -33,6 +35,7 @@
       }
       .logo img{
         width:8rem;
+        margin:1.5rem 0;
       }
 
 
@@ -54,10 +57,18 @@
 //orbit
 .orbit-previous, .orbit-next {
   color: $medium-gray;
-  margin: 0 -1.5rem;
+  margin: 0 -3rem;
   &:hover{ color: $dark-gray;
           background-color: transparent;}
 }
  .orbit-previous:active, .orbit-next:active, .orbit-previous:focus, .orbit-next:focus {
   color: $medium-gray;
+  background-color: transparent;
+}
+
+.orbit-image{
+  height: 30rem;
+  width: auto;
+  display: block;
+  margin-left: auto;
 }
