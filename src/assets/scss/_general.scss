@@ -47,12 +47,20 @@
 
   }
 
-// .patata{
-//   @include xy-cell(5);
-// }
-// .patata2{
-//   @include xy-cell(5);
-// }
+//lang
+.lang{
+  text-transform: lowercase;
+  font-weight: 300;
+  font-size: 0.9rem;
+  a{
+    // color: $medium-gray;
+    padding: 0;
+    padding-right: 0.5rem;
+   }
+   .active{
+     font-weight: 600;
+   }
+}
 
 //orbit
 .orbit-previous, .orbit-next {

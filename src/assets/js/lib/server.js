@@ -4,17 +4,6 @@ import whatInput from 'what-input';
 window.$ = $;
 
 import Foundation from 'foundation-sites';
-// If you want to pick and choose which modules to include, comment out the above and uncomment
-// the line below
-//import './lib/foundation-explicit-pieces';
-
-
-$(document).foundation();
-var activeLang = 'ca';
-if ($( ".lang .es" ).hasClass( "active" )) {
-  activeLang = 'es'
-};
-console.log(activeLang);
 
 var portfolioPostContainer = document.getElementById('lloopp');
 var button = document.getElementById('buttonW');
@@ -69,38 +58,32 @@ function createHTML(postsData){
     }
   portfolioPostContainer.innerHTML = ourHTMLString;
   };
-
+if ($( ".lang .es" ).hasClass( "active" )) {
+  console.log('lang active');
+} else {
+  console.log('lang disabled');
+};
 
   function languageText(lang, text) {
     let esX = text.search("<:es>");
     let caX = text.search("<:ca>");
     let EndTagX;
-
-    if ( lang == 'ca') {
-      // text CA
-      if (caX < esX) {
-      text =text.slice(caX + 5, esX);
-      } else {
-        text = text.slice(caX + 5);
-      }
-    } else {
-      //text no CA
-      if (caX > esX) {
-      text = text.slice(esX + 5, caX) ;
-      } else {
-        text = text.slice(esX + 5);
-      }
-    };
-
-
-    EndTagX = text.search("</")
-    text = text.slice('EndTagX');
+        if ( lang == 'ca') {
+          // text CA
+          if (caX < esX) {
+          text =text.slice(caX + 5, esX);
+          } else {
+            text = text.slice(caX + 5);
+          }
+        } else {
+          //text no CA
+          if (caX > esX) {
+          text = text.slice(esX + 5, caX) ;
+          } else {
+            text = text.slice(esX + 5);
+          }
+        };
+      EndTagX = text.search("</")
+      text = text.slice('EndTagX');
     return text;
   }
-
-var orbit = new Foundation.Orbit($('#lloopp'), {animation: 'fade',
-   timerDelay: 8000,
-   pauseOnHover: true,
-   navButtons: false,
-   bullets: false
-});
