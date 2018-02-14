@@ -1,0 +1,298 @@
+<div class="grid-x grid-margin-x">
+  <div class="small-12 medium-6 columns">
+    <div id="mapBarcelona"></div>
+  </div>
+  <div class="small-12 medium-6 columns mapstext">
+    <h1>Barcelona</h1>
+    <ul class="contact-us-list ">
+      <li class="address">c/ Bertran, 97, Entrl 3ª. 08023.</li>
+      <li class="email"><a href="mailto:contacte@pontconsultori.net">contacte@pontconsultori.net</a></li>
+      <li class="phone"><a href="tel:+34971773589">Teléfono: 971 77 35 89</a>
+      </li>
+    </ul>
+  </div>
+  <div class="small-12 medium-6 columns container-top">
+    <div id="mapManacor"></div>
+  </div>
+  <div class="small-12 medium-6 columns container-top mapstext">
+    <h1>Manacor</h1>
+    <ul class="contact-us-list">
+      <li class="address">c/ Josep López, 33A, 07500</li>
+      <li class="email"><a href="mailto:contacte@pontconsultori.net">contacte@pontconsultori.net</a></li>
+      <li class="phone"><a href="tel:+34971773589">Teléfono: 971 77 35 89</a>
+      </li>
+    </ul>
+  </div>
+</div>
+</div>
+<script>
+  var centerMapBCN = {lat: 41.408842, lng: 2.1397160000000213};
+  var centerMapManacor = {lat: 39.570288, lng: 3.20613};
+
+  var styleMap = [
+      {
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#f5f5f5"
+          }
+        ]
+      },
+      {
+        "elementType": "labels",
+        "stylers": [
+          {
+            "visibility": "off"
+          }
+        ]
+      },
+      {
+        "elementType": "labels.icon",
+        "stylers": [
+          {
+            "visibility": "off"
+          }
+        ]
+      },
+      {
+        "elementType": "labels.text.fill",
+        "stylers": [
+          {
+            "color": "#616161"
+          }
+        ]
+      },
+      {
+        "elementType": "labels.text.stroke",
+        "stylers": [
+          {
+            "color": "#f5f5f5"
+          }
+        ]
+      },
+      {
+        "featureType": "administrative",
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "visibility": "off"
+          }
+        ]
+      },
+      {
+        "featureType": "administrative.land_parcel",
+        "stylers": [
+          {
+            "visibility": "off"
+          }
+        ]
+      },
+      {
+        "featureType": "administrative.land_parcel",
+        "elementType": "labels.text.fill",
+        "stylers": [
+          {
+            "color": "#bdbdbd"
+          }
+        ]
+      },
+      {
+        "featureType": "administrative.neighborhood",
+        "stylers": [
+          {
+            "visibility": "off"
+          }
+        ]
+      },
+      {
+        "featureType": "poi",
+        "stylers": [
+          {
+            "visibility": "off"
+          }
+        ]
+      },
+      {
+        "featureType": "poi",
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#eeeeee"
+          }
+        ]
+      },
+      {
+        "featureType": "poi",
+        "elementType": "labels.text.fill",
+        "stylers": [
+          {
+            "color": "#757575"
+          }
+        ]
+      },
+      {
+        "featureType": "poi.park",
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#e5e5e5"
+          }
+        ]
+      },
+      {
+        "featureType": "poi.park",
+        "elementType": "labels.text.fill",
+        "stylers": [
+          {
+            "color": "#9e9e9e"
+          }
+        ]
+      },
+      {
+        "featureType": "road",
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#ffffff"
+          }
+        ]
+      },
+      {
+        "featureType": "road",
+        "elementType": "labels.icon",
+        "stylers": [
+          {
+            "visibility": "off"
+          }
+        ]
+      },
+      {
+        "featureType": "road.arterial",
+        "elementType": "labels.text.fill",
+        "stylers": [
+          {
+            "color": "#757575"
+          }
+        ]
+      },
+      {
+        "featureType": "road.highway",
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#dadada"
+          }
+        ]
+      },
+      {
+        "featureType": "road.highway",
+        "elementType": "labels.text.fill",
+        "stylers": [
+          {
+            "color": "#616161"
+          }
+        ]
+      },
+      {
+        "featureType": "road.local",
+        "elementType": "labels.text.fill",
+        "stylers": [
+          {
+            "color": "#9e9e9e"
+          }
+        ]
+      },
+      {
+        "featureType": "transit",
+        "stylers": [
+          {
+            "visibility": "off"
+          }
+        ]
+      },
+      {
+        "featureType": "transit.line",
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#e5e5e5"
+          }
+        ]
+      },
+      {
+        "featureType": "transit.station",
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#eeeeee"
+          }
+        ]
+      },
+      {
+        "featureType": "water",
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#c9c9c9"
+          }
+        ]
+      },
+      {
+        "featureType": "water",
+        "elementType": "labels.text.fill",
+        "stylers": [
+          {
+            "color": "#9e9e9e"
+          }
+        ]
+      }
+    ];
+  function initMap() {
+          mapBCN = new google.maps.Map(document.getElementById('mapBarcelona'), {
+          'center' : centerMapBCN,
+          'zoom' : 14,
+          'mapTypeControl': false,
+          'styles' : styleMap
+          });
+
+         var markerBCN = new google.maps.Marker({
+        'position': centerMapBCN,
+        'map': mapBCN,
+        'title': 'PONT | consultori d\'arquitectura | Barcelona'
+        });
+        mapManacor = new google.maps.Map(document.getElementById('mapManacor'), {
+        'center' : centerMapManacor,
+        'zoom' : 15,
+        'mapTypeControl': false,
+        'styles' : styleMap
+        });
+
+       var markerManacor = new google.maps.Marker({
+      'position': centerMapManacor,
+      'map': mapManacor,
+        'title': 'PONT | consultori d\'arquitectura | Manacor'
+      });
+        }
+    </script>
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOjA2H_qwl64VgGyc0C_UIGtnFaRid7A4&callback=initMap">
+</script>
+
+<!-- var mapBarcelona = new google.maps.Map(document.getElementById('mapBarcelona'), {
+  center: {lat: 41.408842, lng: 2.1397160000000213},
+  zoom: 11,
+});
+  var marker = new google.maps.Marker({
+  position: {lat: 41.408842, lng: 2.1397160000000213},
+  map: map
+
+});
+var mapManacor = new google.maps.Map(document.getElementById('mapManacor'), {
+  center: {lat: 39.570288, lng: 3.20613},
+  zoom: 11,
+});
+  var marker1 = new google.maps.Marker({
+  position: {lat: 39.570288, lng: 3.20613},
+  map: map
+
+}); -->

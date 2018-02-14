@@ -5,7 +5,7 @@
   }
 // header
   header{
-      @include xy-cell(3);
+      @include xy-cell(2);
       margin-top: rem-calc(50);
       text-transform: uppercase;
       .menuPrincipal{
@@ -35,7 +35,8 @@
       }
       .logo img{
         width:8rem;
-        margin:1.5rem 0;
+        margin:0;
+        margin-bottom: 2rem;
       }
 
 
@@ -43,9 +44,16 @@
 
 //body
   .container{
-      @include xy-cell(9);
-
+      @include xy-cell(10);
   }
+  .container-top{
+      margin: rem-calc(50) 0;
+  }
+
+  .container-metode{
+    margin-top: 2.8rem;
+  }
+
 
 //lang
 .lang{

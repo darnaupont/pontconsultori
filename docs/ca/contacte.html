@@ -7,7 +7,7 @@
     <title>PONT | consultori d&#x27;arquitectura</title>
     <meta name="description" content="Ajudem a persones a millorar casa seva o el seu lloc de feina oferint-los un servei proper i econòmic. Partim d’una escolta atenta de tots els membres, cara a cara, perquè el nostre treball s’inicia amb la seva experiència." />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" href="../assets/css/app.css">
     <meta name="robots" content="NOINDEX, NOFOLLOW">
     <link rel="apple-touch-icon" sizes="57x57" href="../assets/img/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="../assets/img/favicon/apple-icon-60x60.png">
@@ -56,34 +56,29 @@
             </li>
             <li>
               <ul class="menu lang">
-                <li><a href="../es/index.html" class="es">es</a></li>
-                <li><a href="../ca/index.html" class="ca">ca</a></li>
+                <li><a href="../es/contacto.html" class="es">es</a></li>
+                <li><a href="../ca/contacte.html" class="ca">ca</a></li>
               </ul>
             </li>
         </nav>
 
       </header>
     
-    <div class="container">
-      <div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit id="major">
-        <div class="orbit-wrapper">
-          <div class="orbit-controls">
-            <button class="orbit-previous"><span class="show-for-sr">Anterior</span>&#9664;&#xFE0E;</button>
-            <button class="orbit-next"><span class="show-for-sr">Següent</span>&#9654;&#xFE0E;</button>
-          </div>
-          <ul class="orbit-container" id="pontslider">
-            <li class="is-active orbit-slide">
-              <figure class="orbit-figure">
-                <img class="orbit-image" src="assets/img/MANACOR-02.jpg" alt="Space">
-                <p class="text-right">ca na Caterina i en Guillem | SELECCIONADA PREMIS FAD 2016 I fotos José Hevia</p>
-              </figure>
-            </li>
-          </ul>
-        </div>
-      </div>
+    <div class="container container-top">
+          <div data-interchange="[../assets/partials/mapsmall.html, small], [../assets/partials/maplarge.html, medium]"></div>
+          <p>també pots enviar-nos un a través del formulari</p>
+          <h6><i class="small"> text exemple, es apartats del formulari tambés es poden personalitzar.</i></h6>
+          <form class="contact-us-form">
+            <input type="text" placeholder="Full name">
+            <input type="email" placeholder="Email">
+            <textarea name="message" id="" rows="12" placeholder="Type your message here"></textarea>
+            <div class="contact-us-form-actions">
+              <input type="submit" class="button float-right" value="Send it" />
+            </div>
+          </form>
     </div>
     
     </div>
-    <script src="assets/js/app.js"></script>
+    <script src="../assets/js/app.js"></script>
   </body>
 </html>

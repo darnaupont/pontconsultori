@@ -11,28 +11,91 @@
     <link rel="stylesheet" href="{{root}}assets/css/app.css">
     <meta name="{{metaName}}" content="{{metaContent}}">
 {{!-- Favicons --}}
-    <link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="assets/img/favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="assets/img/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="assets/img/favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="assets/img/favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" sizes="57x57" href="../assets/img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../assets/img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../assets/img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../assets/img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../assets/img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../assets/img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../assets/img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="../assets/img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../assets/img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/img/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="assets/img/favicon/ms-icon-144x144.png">
+    <meta name="msapplication-TileImage" content="../assets/img/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
   {{!-- End Favicons. --}}
   </head>
   <body>
     <div class="prova">
+      <header>
+        <div class="logo">
+          <a href="index.html">
+            <img src="../assets/img/Pontconsultorilogo.png" alt="Pont consultori d'arquitectura">
+          </a>
+        </div>
+        {{#ifequal lang 'es'}}
+        <nav class="vertical menuPrincipal">
+            <li>
+              <a href="../{{lang}}/{{#ifequal lang 'es'}}metodo{{/ifequal}}{{#ifequal lang 'ca'}}metode{{/ifequal}}.html">el Metodo</a>
+              <ul>
+                <!-- <li>noticias</li> -->
+                <li>estudio</li>
+              </ul>
+            </li>
+            <li>
+              <a href="../{{lang}}/index.html">trabajos</a>
+              <ul>
+                <li>familia</li>
+                <li>empresa</li>
+                <li>otros</li>
+              </ul>
+            </li>
+            <li>
+              <a href="../{{lang}}/{{#ifequal lang 'es'}}contacto{{/ifequal}}{{#ifequal lang 'ca'}}contacte{{/ifequal}}.html">Contacto</a>
+            </li>
+            <li>
+              <ul class="menu lang">
+                <li><a href="../es/{{currentPageES}}.html" class="es">es</a></li>
+                <li><a href="../ca/{{currentPageCA}}.html" class="ca">ca</a></li>
+              </ul>
+            </li>
+        </nav>
+        {{/ifequal}}
+        {{#ifequal lang 'ca'}}
+        <nav class="vertical menuPrincipal">
+            <li>
+              <a href="../{{lang}}/{{#ifequal lang 'es'}}metodo{{/ifequal}}{{#ifequal lang 'ca'}}metode{{/ifequal}}.html">el Mètode</a>
+              <ul>
+                <!-- <li>notícies</li> -->
+                <li>estudi</li>
+              </ul>
+            </li>
+            <li>
+              <a href="../{{lang}}/index.html">{{#ifequal lang 'es'}}trabajos{{/ifequal}}{{#ifequal lang 'ca'}}treballs{{/ifequal}}</a>
+              <ul>
+                <li>família</li>
+                <li>empresa</li>
+                <li>altres</li>
+              </ul>
+            </li>
+            <li>
+              <a href="../{{lang}}/{{#ifequal lang 'es'}}contacto{{/ifequal}}{{#ifequal lang 'ca'}}contacte{{/ifequal}}.html">Contacte</a>
+            </li>
+            <li>
+              <ul class="menu lang">
+                <li><a href="../es/{{currentPageES}}.html" class="es">es</a></li>
+                <li><a href="../ca/{{currentPageCA}}.html" class="ca">ca</a></li>
+              </ul>
+            </li>
+        </nav>
+        {{/ifequal}}
 
+      </header>
     {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
     {{> body}}
     </div>

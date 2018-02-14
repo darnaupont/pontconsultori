@@ -10,10 +10,11 @@
   "author": "ZURB <foundation@zurb.com>",
   "license": "MIT",
   "dependencies": {
+    "font-awesome": "^4.7.0",
     "foundation-sites": "~6.4.1",
     "jquery": ">=3.0.0",
-    "what-input": "^5.0.5",
-    "motion-ui": "~1.2.2"
+    "motion-ui": "~1.2.2",
+    "what-input": "^5.0.5"
   },
   "devDependencies": {
     "babel-core": "^6.24.1",
