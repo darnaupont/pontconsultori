@@ -67,7 +67,7 @@ function createslider (postsData, pItemID){
     ourHTMLString+=
     '<li class="' + active + ' orbit-slide" data-slide="0"' + style +'>' +
     '<figure class="orbit-figure">' +
-      '<img class="orbit-image" src="' + postsData[i].media_details.sizes.medium.source_url + '" alt="' + postsData[i].title.rendered +'">' +
+      '<img class="orbit-image" src="' + postsData[i].media_details.sizes.large.source_url + '" alt="' + postsData[i].title.rendered +'">' +
       '<p class="text-right">' + languageText(lang, postsData[i].caption.rendered) + '</p>' +
     '</figure>' +
     '</li>';
