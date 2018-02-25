@@ -1,0 +1,20 @@
+{
+    "short_name": "pontconsultori.net",
+    "name": "Pont consultori web",
+    "icons": [
+        {
+            "src": "favicon-144.png",
+            "sizes": "144x144",
+            "type": "image/png"
+        },
+        {
+            "src": "favicon-300.png",
+            "sizes": "300x300",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "/",
+    "display": "browser",
+    "background_color": "#ffffff",
+    "theme_color": "#ffffff"
+}

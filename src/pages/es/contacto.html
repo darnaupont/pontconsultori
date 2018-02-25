@@ -15,9 +15,9 @@ metaContent: "NOINDEX, NOFOLLOW"
     <div class="small-12 columns contact-us-section-right">
       <hr>
       <h1 class="contact-us-header">Queremos saber de ti, envianos un mensaje</h1>
-      <form class="contact-us-form">
-        <input type="text" placeholder="Nombre">
-        <input type="email" placeholder="Email">
+      <form id="contact-form" class="contact-us-form" method="post" action="../assets/server/phpmail.php" role="form">
+        <input type="text"  name="nom" placeholder="Nombre">
+        <input type="email" name="email"placeholder="Email">
         <textarea name="message" id="" rows="12" placeholder="mensaje.."></textarea>
         <div class="contact-us-form-actions">
           <input type="submit" class="button" value="enviar" />
