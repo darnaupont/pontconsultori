@@ -9,7 +9,8 @@
     <meta name="description" content="{{description}}" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{root}}assets/css/app.css">
-    <meta name="{{metaName}}" content="{{metaContent}}">
+    <meta name="robots" content="index, follow">
+    <!-- <meta name="{{metaName}}" content="{{metaContent}}"> -->
 {{!-- Favicons --}}
     <link rel="apple-touch-icon" sizes="57x57" href="../assets/img/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="../assets/img/favicon/apple-icon-60x60.png">
@@ -31,11 +32,12 @@
   {{!-- End Favicons. --}}
   </head>
   <body>
-    <div class="prova">
+    <div class="maincontainer">
       <header>
         <div class="logo">
           <a href="../{{lang}}/index.html">
             <img src="../assets/img/Pontconsultorilogo.png" alt="Pont consultori d'arquitectura">
+            <span>consultori d'arquitectura</span>
           </a>
         </div>
         {{#ifequal lang 'es'}}

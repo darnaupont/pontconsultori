@@ -1,7 +1,8 @@
 //body
-  .prova{
-  @include xy-grid-container;
+
+  .maincontainer{
   @include xy-grid();
+    @include xy-grid-container;
   }
 // header
   header{
@@ -14,10 +15,22 @@
 
 
       text-transform: uppercase;
-      .logo img{
+      .logo{
+        margin-bottom: 2rem;
+         img{
         width:8rem;
         margin:0;
-        margin-bottom: 2rem;
+        }
+        a{
+          display: inline-grid;
+          span{
+            font-size:10.5px;
+            word-spacing: 1px;
+            letter-spacing: 0.5px;
+            text-transform: lowercase;
+            color: $black;
+          }
+        }
       }
       .menuPrincipal{
 
@@ -100,6 +113,7 @@
   color: $medium-gray;
   background-color: transparent;
 }
+
 .orbit-image{
   width: auto;
   max-width: none;
